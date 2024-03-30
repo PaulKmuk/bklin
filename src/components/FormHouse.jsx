@@ -2,6 +2,7 @@ import React from 'react'
 import image from '../images/domek.jpg'
 import Button from './Button'
 import { house } from '../data'
+import { Link } from 'react-router-dom'
 
 
 const FormHouse = () => {
@@ -29,9 +30,11 @@ const FormHouse = () => {
                </div>
          </div>
          <div className='flex justify-center p-6 '>
-            <a>
+            <Link
+               to="/domek"
+            >
                <Button label="Zarezerwuj"/>
-            </a>
+            </Link>
          </div>
       </div>
    )

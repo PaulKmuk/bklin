@@ -1,9 +1,8 @@
 import React from 'react'
 import image from '../images/pokoje.jpg'
-import Input from './Input'
-import Textarea from './Textarea'
 import Button from './Button'
 import { rooms } from '../data'
+import { Link } from 'react-router-dom'
 
 
 const FormRooms = () => {
@@ -31,9 +30,11 @@ const FormRooms = () => {
                </div>
          </div>
          <div className='flex justify-center p-6 '>
-            <a>
+            <Link
+               to="/pokoje"
+            >
                <Button label="Zarezerwuj"/>
-            </a>
+            </Link>
          </div>
       </div>
    )

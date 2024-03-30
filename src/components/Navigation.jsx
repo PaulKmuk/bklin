@@ -6,6 +6,7 @@ import { MdMenu } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { navLinks, colors } from '../data';
 import { ColorContext } from '../context/colorContext';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
 
@@ -13,6 +14,7 @@ const Navigation = () => {
    const [showMenu, setShowMenu] = useState(false)
    const [positionY, setPositionY] = useState(0)
    const { selectColor, setSelectColor } = useContext(ColorContext)
+   const navigate = useNavigate()
 
    useEffect(() => {
       window.addEventListener('scroll', () => setPositionY(window.scrollY))
@@ -41,6 +43,7 @@ const Navigation = () => {
             <div className='gap-10 hidden md:flex'>
                {navLinks.map((el, index) => (
                   <a 
+                     onClick={() => !el.path.includes("#") && navigate(el.path)}
                      key={index}
                      href={el.path}
                      className={`text-base uppercase tracking-wider font-semibold hover:text-slate-400 transition-all duration-300 p-1`}
@@ -94,7 +97,10 @@ const Navigation = () => {
             {navLinks.map((el, index) => (
                <a
                   key={index}
-                  onClick={() => setShowMenu(false)}
+                  onClick={() => {
+                     setShowMenu(false)
+                     !el.path.includes("#") && navigate(el.path)
+                  }}
                   href={el.path}
                   className='text-gray-300 text-2xl font-semibold uppercase tracking-wider'
                >

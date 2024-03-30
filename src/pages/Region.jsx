@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeaderPage from '../components/HeaderPage';
 import img1 from "../images/train/6.jpg"
 import Button from '../components/Button';
@@ -12,6 +12,9 @@ const Region = () => {
    const [images, setImages] = useState([])
    const [selectImg, setSelectImg] = useState(0)
 
+   useEffect(() => {
+      window.scrollTo(0, 0)
+   },[])
 
    const changeImg = (x) => {
       if(x === 1){

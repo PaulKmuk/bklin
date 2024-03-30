@@ -37,6 +37,10 @@ const Rooms = () => {
    ))
 
    useEffect(() => {
+      window.scrollTo(0, 0)
+   },[])
+
+   useEffect(() => {
       selectRoom === "Ryś" && setImages(rys)
       selectRoom === "Wilk" && setImages(wilk)
       selectRoom === "Żbik" && setImages(zbik)

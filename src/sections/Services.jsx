@@ -4,6 +4,7 @@ import bgRooms from '../images/pokoje.jpg'
 import bgHouse from '../images/domek.jpg'
 import bgMap from '../images/klinMap.png'
 import Button from '../components/Button'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
    return (
@@ -27,11 +28,11 @@ const Services = () => {
                   </p>
                </div>
                <div className='mt-auto flex justify-center items-center p-4 bg-gray-50'>
-                  <a
-                     href='/domek'
+                  <Link
+                     to='/domek'
                   >
                      <Button label="Zobacz"/>
-                  </a>
+                  </Link>
                </div>
             </div>
 
@@ -49,11 +50,11 @@ const Services = () => {
                   </p>
                </div>
                <div className='mt-auto flex justify-center items-center p-4 bg-gray-50'>
-                  <a
-                     href='/pokoje'
+                  <Link
+                     to='/pokoje'
                   >
                      <Button label="Zobacz"/>
-                  </a>
+                  </Link>
                </div>
             </div>
 
@@ -73,11 +74,11 @@ const Services = () => {
                   </p>
                </div>
                <div className='mt-auto flex justify-center items-center p-4 bg-gray-50'>
-                  <a
-                     href='/okolica'
+                  <Link
+                     to='/okolica'
                   >
                      <Button label="Zobacz"/>
-                  </a>
+                  </Link>
                </div>
             </div>
          </div>
