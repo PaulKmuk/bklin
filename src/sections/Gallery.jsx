@@ -16,10 +16,13 @@ import img9 from "../images/gallery/gallery9.jpg";
 import img10 from "../images/gallery/gallery10.jpg";
 import Button from '../components/Button';
 
+import { useNavigate } from 'react-router-dom';
+
 const Gallery = () => {
 
    const [showImg, setShowImg] = useState(-1)
    const images = [ img1, img2, img3, img4, img5, img6, img7, img8, img9, img10 ]
+   const navigate = useNavigate()
 
    const changeImg = (x) => {
 
@@ -70,7 +73,7 @@ const Gallery = () => {
                   <img className='cursor-pointer hover:scale-105 transition-all duration-300' onClick={() => setShowImg(9)} src={img10}/>
                   <img className='cursor-pointer hover:scale-105 transition-all duration-300' onClick={() => setShowImg(7)} src={img8}/>
                   <div className='border flex justify-center items-center p-2 md:p-4 overflow-hidden'>
-                     <Button label="pełna galeria"/>
+                     <Button onClick={() => navigate('/galeria')} label="pełna galeria"/>
                   </div>
                </div>
             </div>

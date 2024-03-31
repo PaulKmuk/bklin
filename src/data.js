@@ -161,6 +161,18 @@ export const house = {
    ]
 }
 
+export const imagesGallery = {
+   rooms: {
+      kon: [kon1, kon2, kon3, kon4, kon5],
+      rys: [rys1, rys2, rys3, rys4, rys5, rys6],
+      wilk: [wilk1, wilk2, wilk3, wilk4, wilk5],
+      zbik: [zbik1, zbik2, zbik3, zbik4, zbik5, zbik6],
+      kuchnia: [kuchnia1, kuchnia2, kuchnia3]
+   },
+   house: [house1, house2, house3, house4, house5, house6, house7, house8, house9, house10, house11, house12,],
+   region: [train1, train2, train3, train4, train5, train6, trail1, trail2, trail3, trail4, trail5, trail6, trail7, trail8, bklin1, bklin2, bklin3, bklin4, bklin5, bklin6, bklin7, bklin8, bklin9, bklin10, animal1, animal2, animal3, animal4, animal5, animal6]
+}
+
 export const rooms = {
    images: {
       kon: [kon1, kon2, kon3, kon4, kon5],
