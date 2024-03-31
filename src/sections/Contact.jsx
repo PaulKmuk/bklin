@@ -36,7 +36,7 @@ const Contact = () => {
                {array.map((el, index) => (
                   <div
                      key={index}
-                     className='border flex items-center text-lg gap-6 p-6 md:p-10'
+                     className='border flex items-center text-lg gap-6 p-4 sm:p-6 md:p-10'
                   >
                      <p
                         className='text-2xl text-gray-500'
@@ -44,7 +44,7 @@ const Contact = () => {
                         {el.icon}
                      </p>
                      <a
-                        className='font-semibold' 
+                        className='font-semibold text-xs sm:text-base' 
                         href=""
                      >
                         {el.label}
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div className='md:flex-1 flex flex-col gap-2'>
                <Input placeholder="Imie i Nazwisko *"/>
-               <div className='flex gap-2'>
+               <div className='flex flex-col md:flex-row gap-2'>
                   <Input placeholder="Adres E-mail *"/>
                   <Input placeholder="Numer telefonu *"/>
                </div>

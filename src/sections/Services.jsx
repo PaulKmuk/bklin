@@ -20,10 +20,10 @@ const Services = () => {
                   className='w-full h-[150px] md:h-[200px] object-cover object-center'
                   src={bgHouse}/>
                <div className='p-4'>
-                  <h4 className='text-gray-700 fontHeader uppercase text-3xl font-bold pb-4'>
+                  <h4 className='text-gray-700 fontHeader uppercase text-2xl md:text-3xl font-bold pb-4'>
                      Samodzielny domek
                   </h4>
-                  <p className='text-gray-500 font-semibold'>
+                  <p className='text-gray-500 text-xs sm:text-base font-semibold'>
                      Dla miłośników prywatności udostępniamy samodzielny i komfortowy 4-6 osobowy, piętrowy domek z tarasem.
                   </p>
                </div>
@@ -42,10 +42,10 @@ const Services = () => {
                   className='w-full h-[150px] md:h-[200px] object-cover object-center' 
                   src={bgRooms}/>
                <div className='p-4'>
-                  <h4 className='text-gray-700 fontHeader uppercase text-3xl font-bold pb-4'>
+                  <h4 className='text-gray-700 fontHeader uppercase text-2xl md:text-3xl font-bold pb-4'>
                      Pokoje
                   </h4>
-                  <p className='text-gray-500 font-semibold'>
+                  <p className='text-gray-500 text-xs sm:text-base font-semibold'>
                      W naszej ofercie udostępniamy dla Gości cztery pokoje dwuosobowe z własną łazienką, każdy z możliwością dwóch dostawek.
                   </p>
                </div>
@@ -62,14 +62,14 @@ const Services = () => {
             <div className='flex-1 max-w-[400px] shadow-xl md:h-[420px] flex flex-col transition-all duration-300 hover:scale-[1.02]'>
                <div className='w-full h-[200px] overflow-hidden'>
                   <img
-                     className='w-full object-cover object-center scale-150' 
+                     className='w-full h-full object-cover object-center scale-150' 
                      src={bgMap}/>
                </div>
                <div className='p-4'>
-                  <h4 className='text-gray-700 fontHeader uppercase text-3xl font-bold pb-4'>
+                  <h4 className='text-gray-700 fontHeader uppercase text-2xl md:text-3xl font-bold pb-4'>
                      W najbliższej okolicy
                   </h4>
-                  <p className='text-gray-500 font-semibold'>
+                  <p className='text-gray-500 text-xs sm:text-base font-semibold'>
                      W bliskiej okolicy Bieszczadzkiego Klinu znajdą ukojenie zarówno niesforne dusze, jak i spokojne anioły...
                   </p>
                </div>

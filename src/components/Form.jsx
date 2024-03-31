@@ -37,7 +37,7 @@ const Form = () => {
                      ? 'flex gap-2 items-center bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.35)] lg:px-5 px-4 lg:py-4 py-3 text-white font-semibold text-sm lg:text-lg cursor-pointer'
                      : 'flex gap-2 items-center bg-white text-gray-700 lg:px-5 px-4 lg:py-4 py-3  font-semibold text-sm lg:text-lg cursor-pointer'}
                >
-                  <p>{el.icon}</p>
+                  <p className='max-sm:hidden'>{el.icon}</p>
                   <p>{el.label}</p>
                </div>
             ))}
