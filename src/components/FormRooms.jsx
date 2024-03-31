@@ -15,7 +15,7 @@ const FormRooms = () => {
             <h2 className='text-xl font-semibold flex gap-5 px-4'>
                Pokoje, 2-4 osobowe
             </h2>
-            <div className='w-full bg-gray-10 px-4 grid grid-cols-2 sm:grid-cols-3 gap-4 rounded-md'>
+            <div className='w-full bg-gray-10 px-4 grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4 rounded-md'>
                   {rooms.options.map((el, index) => (
                      <div
                         className='bg-gray-50 text-slate-800 rounded-md border border-slate-400 flex flex-col items-center p-2'
