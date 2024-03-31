@@ -2,11 +2,14 @@ import React from 'react'
 import logo from "../images/logo-light.png"
 import house from "../images/domek.jpg"
 import rooms from "../images/pokoje.jpg"
+import { useNavigate } from 'react-router-dom'
 import { navLinks } from '../data';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookSquare } from "react-icons/fa";
 
 
 const Footer = () => {
+
+   const navigate = useNavigate()
 
    const array = [
       {
@@ -67,7 +70,20 @@ const Footer = () => {
             <div className='py-10 md:py-20 flex flex-col items-center gap-4'>
                {navLinks.map((el, index) => (
                   <a
-                     href={el.path}
+                     onClick={(e) => {
+                        e.preventDefault()
+                        if(!el.path.includes("#")) {
+                           navigate(el.path)
+                        } else {
+                           navigate("/")
+                           setTimeout(() => {
+                              const target = document.getElementById(el.label);
+                              target && target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                              console.log("settimeout");
+                           },100)
+                        } 
+                     }}
+                     // href={el.path}
                      key={index}
                      className='uppercase cursor-pointer hover:text-slate-500'
                   >

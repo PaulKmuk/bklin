@@ -21,10 +21,11 @@ const House = () => {
 
    return (
       <div>
+         
          <HeaderPage 
             img={img}
             title='Samodzielny domek' 
-            description='Dla miłośników prywatności udostępniamy samodzielny i komfortowy 4-6 osobowy, </br>piętrowy domek z tarasem.'/>
+            description='Samodzielny Domek dla całej rodziny'/>
 
          <div className=''>
             <div className='w-full max-w-[1200px] mx-auto p-4 md:p-8 flex flex-col-reverse md:flex-row gap-10 py-20'>
