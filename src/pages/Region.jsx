@@ -44,12 +44,12 @@ const Region = () => {
          <div className='max-w-[1200px] mx-auto w-full p-8 py-20 flex flex-col gap-10 md:gap-20'>
 
             {regionList.map((el, index) => (
-               <div key={index} className='w-full h-[400px] flex justify-end relative'>
+               <div key={index} className='w-full h-[500px] md:h-[400px] flex justify-end relative'>
                   <img className='w-full md:w-[90%] h-full object-cover object-center' src={el.images[0]}/>
-                  <div className='absolute bg-white w-[90%] md:w-[550px]  md:h-[60%] left-[50%] md:left-0 max-md:-translate-x-[50%] bottom-4 md:top-[50%] md:-translate-y-[50%] border px-10 p-4 flex flex-col justify-center'>
-                     <h2 className='py-4 text-xl md:text-2xl font-bold text-slate-800'>{el.title}</h2>
-                     <p className='pb-2 md:text-xl font-semibold text-slate-500'>{el.description1}</p>
-                     <p className='pb-6 max-md:text-sm font-semibold text-slate-900'>{el.description2}</p>
+                  <div className='absolute bg-white w-[90%] md:w-[550px] md:h-[60%] left-[50%] md:left-0 max-md:-translate-x-[50%] bottom-4 md:top-[50%] md:-translate-y-[50%] border px-10 p-4 flex flex-col justify-center'>
+                     <h2 className='py-4 text-lg sm:text-xl md:text-2xl font-bold text-slate-800'>{el.title}</h2>
+                     <p className='pb-2 text-xs md:text-xl font-semibold text-slate-500'>{el.description1}</p>
+                     <p className='pb-6 max-md:text-xs font-semibold text-slate-900'>{el.description2}</p>
                      <div className='flex justify-center'>
                         <Button onClick={() => setImages(el.images)} label="Zobacz"/>
                      </div>

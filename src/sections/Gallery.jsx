@@ -69,7 +69,7 @@ const Gallery = () => {
                   <img className='cursor-pointer hover:scale-105 transition-all duration-300' onClick={() => setShowImg(8)} src={img9}/>
                   <img className='cursor-pointer hover:scale-105 transition-all duration-300' onClick={() => setShowImg(9)} src={img10}/>
                   <img className='cursor-pointer hover:scale-105 transition-all duration-300' onClick={() => setShowImg(7)} src={img8}/>
-                  <div className='border flex justify-center items-center p-4'>
+                  <div className='border flex justify-center items-center p-2 md:p-4 overflow-hidden'>
                      <Button label="pełna galeria"/>
                   </div>
                </div>
