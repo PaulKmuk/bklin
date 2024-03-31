@@ -236,7 +236,7 @@ export const rooms = {
 
 export const navLinks = [
    {
-      label: "o nas",
+      label: "o-nas",
       path: "/#o-nas"
    },
    {

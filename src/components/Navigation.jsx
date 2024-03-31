@@ -8,6 +8,8 @@ import { navLinks, colors } from '../data';
 import { ColorContext } from '../context/colorContext';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const Navigation = () => {
 
 
@@ -42,11 +44,23 @@ const Navigation = () => {
             </a>
             <div className='gap-10 hidden md:flex'>
                {navLinks.map((el, index) => (
-                  <a 
-                     onClick={() => !el.path.includes("#") && navigate(el.path)}
+                  <a
+                     onClick={(e) => {
+                        e.preventDefault()
+                        if(!el.path.includes("#")) {
+                           navigate(el.path)
+                        } else {
+                           navigate("/")
+                           setTimeout(() => {
+                              const target = document.getElementById(el.label);
+                              target && target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                              console.log("settimeout");
+                           },100)
+                        } 
+                     }}
                      key={index}
-                     href={el.path}
-                     className={`text-base uppercase tracking-wider font-semibold hover:text-slate-400 transition-all duration-300 p-1`}
+                     // href={el.path}
+                     className={`text-base uppercase tracking-wider font-semibold hover:text-slate-400 transition-all duration-300 p-1 cursor-pointer`}
                   >
                      {el.label}
                   </a>
@@ -99,9 +113,18 @@ const Navigation = () => {
                   key={index}
                   onClick={() => {
                      setShowMenu(false)
-                     !el.path.includes("#") && navigate(el.path)
+                     e.preventDefault()
+                     if(!el.path.includes("#")) {
+                        navigate(el.path)
+                     } else {
+                        navigate("/")
+                        setTimeout(() => {
+                           const target = document.getElementById(el.label);
+                           target && target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                           console.log("settimeout");
+                        },100)
+                     } 
                   }}
-                  href={el.path}
                   className='text-gray-300 text-2xl font-semibold uppercase tracking-wider'
                >
                   {el.label}
