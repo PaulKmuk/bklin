@@ -111,7 +111,7 @@ const Navigation = () => {
             {navLinks.map((el, index) => (
                <a
                   key={index}
-                  onClick={() => {
+                  onClick={(e) => {
                      setShowMenu(false)
                      e.preventDefault()
                      if(!el.path.includes("#")) {
